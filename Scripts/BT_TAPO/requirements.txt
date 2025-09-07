@@ -1,0 +1,3 @@
+tapo
+python-dotenv
+PyYAML

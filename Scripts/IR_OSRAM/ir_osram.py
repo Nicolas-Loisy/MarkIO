@@ -172,6 +172,9 @@ class OsramRGBWRemote:
         # Stop bit
         data.append(560)
         
+        # Ajout d'impulsions OFF supplementaires pour atteindre 71 impulsions
+        while len(data) < 71:
+            data.append(560)  # OFF supplementaire
         return data
     
     def send_ir_burst(self, duration_us: int):
